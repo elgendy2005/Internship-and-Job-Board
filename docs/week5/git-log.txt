@@ -1,0 +1,121 @@
+commit cbea121f67bfd1619981645517481cc93d492e22
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:35:19 2026 +0200
+
+    docs: move after.md to docs/week5
+
+commit 3fb6f0193291ee496271109c887cacaa92be63dc
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:34:56 2026 +0200
+
+    docs: before/after table and pairing reflection
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 6fe0cb1f86cea7971583462ced7d5b16a5cfe5e4
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:34:02 2026 +0200
+
+    Refactor step 7: fix hidden bug, every student gets a fee
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 51a12cf09a93ec94fc6bf5f8b42cbb53b1275757
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:32:58 2026 +0200
+
+    Refactor step 6: report returns text instead of printing
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 6a63783a589985ab33d7f5f3b3ee6d59cfc40fb0
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:31:42 2026 +0200
+
+    Refactor step 5: immutable extras default and Course dataclass (B006)
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 4f5098dbcfa4ff30e0dc1bc6afdd50b74e1dcb2e
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:30:11 2026 +0200
+
+    Refactor step 4: rate table instead of if/elif (C901, E711, E712)
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 5f0d889a9ed7938a0d4cf159e8fbfff2c0b31993
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:29:21 2026 +0200
+
+    Refactor step 3: named constants and StudentType enum (PLR2004)
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 8b539554392cf44190bf7a2082fb1b277f4aecac
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:28:29 2026 +0200
+
+    Refactor step 2: rename to clear names (N802)
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit b648b41c37d436482d1ef77154bddb1d31661953
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:27:44 2026 +0200
+
+    Refactor step 1: remove dead code (F401, F841, ARG001)
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit 57d9fd9dd735515a49639be348fa880b1115c39e
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:26:48 2026 +0200
+
+    test: characterization tests for fees (before refactoring)
+
+commit a56ae45047494f699c8077e8dbd1592718a68302
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:25:56 2026 +0200
+
+    docs: move findings to docs/week5
+
+commit 5e0e3ad05dd56d68999d7765433fa6731552071b
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:25:30 2026 +0200
+
+    docs: findings table, extra smells and hidden bug
+
+commit 40f644ed2bdb2cd2cb57270777fda8a0e89f46d1
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:24:01 2026 +0200
+
+    docs: ruff and pylint output before refactoring
+
+commit d1da777749c83875212ba082eb63d33b1c7089fd
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:20:50 2026 +0200
+
+    Remove magic numbers from letter_grade
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit e49f8aa2519c7930605a88ef696a07547433a402
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:18:56 2026 +0200
+
+    Add boundary tests for letter_grade
+    
+    Co-authored-by: Ahmed Elbarazany <ahmedelbrzany11@gmail.com>
+
+commit a1735aa69b2bd8e29149b96d5d7b506d2b339a3d
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:17:13 2026 +0200
+
+    Add letter_grade
+
+commit 000e2adbf419d14bd82b870415d5e6a6a9f7ab94
+Author: Ahmed ElGendy <modagemy@gmail.com>
+Date:   Thu Nov 26 17:12:59 2026 +0200
+
+    chore: week5 setup
