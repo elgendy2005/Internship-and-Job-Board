@@ -14,7 +14,10 @@
     "build": "vite build",
     "start": "cross-env NODE_ENV=production node src/server/index.js",
     "preview": "npm run build && npm start",
-    "seed": "node src/server/seed.js"
+    "seed": "node src/server/seed.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
@@ -27,7 +30,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.3.0",
+    "@vitest/coverage-v8": "^5.1.2",
     "concurrently": "^10.0.7",
-    "vite": "^8.4.0"
+    "supertest": "^7.3.2",
+    "vite": "^8.4.0",
+    "vitest": "^5.1.2"
   }
 }
