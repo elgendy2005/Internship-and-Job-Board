@@ -1,0 +1,28 @@
+d52f1ff docs: Part D Gherkin scenarios for apply-to-internship story
+5681f78 feat: add SiblingPolicy (green)
+3c0bf34 test: sibling policy 25% off (red)
+c128822 refactor: inject invoice writer (DIP) (green)
+33f9f71 test: invoice uses injected writer (red)
+6726682 refactor: replace if/elif with POLICIES lookup (OCP)
+25d76e0 refactor: extract fee policy classes (SRP)
+ca67717 refactor: name magic numbers
+b353494 docs: move smells table to docs/lab6
+c242047 test: characterization tests for invoice
+3069344 docs: C1 code smells table
+c1167ff feat: BDD drop step (green)
+0cff7a8 test: BDD drop scenario (red)
+9b6426e test: BDD registration feature from handout
+009f173 docs: move A1 answer and add coverage screenshot
+597b24e docs: coverage report and A1 answer
+62edf79 feat: drop unregistered course raises error (green)
+76b9b4d test: drop unregistered course raises error (red)
+32506b9 refactor: use MAX_HOURS in error message
+886e123 feat: rule 4 drop course (green)
+0bcdf82 test: rule 4 drop course (red)
+5b9f73d feat: rule 3 no duplicate course (green)
+70e375a test: rule 3 no duplicate course (red)
+1c8c282 feat: rule 2 max 18 hours (green)
+6fa59a8 test: rule 2 max 18 hours (red)
+e91d392 feat: rule 1 register adds hours (green)
+1c61964 test: rule 1 register adds hours (red)
+a5cd6bb chore: lab6 setup
