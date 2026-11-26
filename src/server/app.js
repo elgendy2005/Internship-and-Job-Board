@@ -40,8 +40,7 @@ export function createApp(db, { clientDir } = {}) {
   return app;
 }
 
-// Express recognises error handlers by their four arguments, so `next` must stay.
-// eslint-disable-next-line no-unused-vars
+// Express recognises error handlers by their four arguments, so `_next` must stay.
 function jsonErrorHandler(err, _req, res, _next) {
   const status = err.status ?? err.statusCode ?? 500;
 
