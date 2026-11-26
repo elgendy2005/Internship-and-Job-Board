@@ -1,3 +1,5 @@
+"""Tuition fee calculation, refactored from legacy_fees.py."""
+
 from dataclasses import dataclass
 from enum import Enum
 
@@ -8,13 +10,19 @@ SUMMER_FEE = 150
 
 
 class StudentType(Enum):
+    """Kinds of student. Each kind pays a different share of the fee."""
+
     REGULAR = 1
     STAFF_CHILD = 2
     SCHOLARSHIP = 3
 
+
 @dataclass(frozen=True)
 class Course:
+    """A registered course and its credit hours."""
+
     hours: int
+
 
 RATES = {
     StudentType.REGULAR: 1,
@@ -22,8 +30,15 @@ RATES = {
     StudentType.SCHOLARSHIP: 0,
 }
 
+LABELS = {
+    StudentType.REGULAR: "Student",
+    StudentType.STAFF_CHILD: "Staff child",
+    StudentType.SCHOLARSHIP: "Scholarship",
+}
+
 
 def tuition_fee(courses, kind, summer=False, *, discount=0, extras=()):
+    """Return the tuition fee for a student's courses."""
     hours = sum(course.hours for course in courses)
     total = hours * FEE_PER_HOUR * RATES[kind]
     if total > HIGH_FEE_LIMIT:
@@ -33,14 +48,8 @@ def tuition_fee(courses, kind, summer=False, *, discount=0, extras=()):
     return total - discount + sum(extras)
 
 
-LABELS = {
-    StudentType.REGULAR: "Student",
-    StudentType.STAFF_CHILD: "Staff child",
-    StudentType.SCHOLARSHIP: "Scholarship",
-}
-
-
 def report(courses, kind, summer=False):
+    """Return the fee as printable text; printing is left to the caller."""
     fee = tuition_fee(courses, kind, summer)
     text = f"{LABELS[kind]} fee: {fee}"
     if fee > HIGH_FEE_LIMIT:
@@ -49,13 +58,10 @@ def report(courses, kind, summer=False):
 
 
 def process_all(students):
-    for student in students:
-        if student["type"] == StudentType.REGULAR:
-            fee = tuition_fee(
-                student["courses"], StudentType.REGULAR, student["summer"]
-            )
-        if student["type"] == StudentType.STAFF_CHILD:
-            fee = tuition_fee(
-                student["courses"], StudentType.STAFF_CHILD, student["summer"]
-            )
-        print(student["name"], fee)
+    """Return every student's fee by name. All student types are handled."""
+    return {
+        student["name"]: tuition_fee(
+            student["courses"], student["type"], student["summer"]
+        )
+        for student in students
+    }

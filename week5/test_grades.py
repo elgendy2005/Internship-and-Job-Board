@@ -20,16 +20,18 @@ def test_score_above_100_is_rejected():
         letter_grade(101)
 
 
-
-@pytest.mark.parametrize("score, grade", [
-    (100, "A"),
-    (80, "B"),
-    (79, "C"),
-    (70, "C"),
-    (69, "D"),
-    (60, "D"),
-    (0, "F"),
-])
+@pytest.mark.parametrize(
+    "score, grade",
+    [
+        (100, "A"),
+        (80, "B"),
+        (79, "C"),
+        (70, "C"),
+        (69, "D"),
+        (60, "D"),
+        (0, "F"),
+    ],
+)
 def test_grade_boundaries(score, grade):
     assert letter_grade(score) == grade
 
