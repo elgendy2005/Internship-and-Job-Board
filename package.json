@@ -9,9 +9,12 @@
   },
   "scripts": {
     "dev:server": "node --watch src/server/index.js",
-    "start": "cross-env NODE_ENV=production node src/server/index.js"
+    "start": "cross-env NODE_ENV=production node src/server/index.js",
+    "seed": "node src/server/seed.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.2.0",
     "cross-env": "^10.1.0",
     "express": "^5.3.0"
   },

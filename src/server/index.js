@@ -1,6 +1,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createApp } from './app.js';
+import { openDb } from './db.js';
 
 // Load .env if present (Node 22 built-in, no dotenv needed).
 try {
@@ -13,7 +14,8 @@ const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../.
 const isProduction = process.env.NODE_ENV === 'production';
 const port = Number(process.env.PORT) || 3000;
 
-const app = createApp(null, {
+const db = openDb();
+const app = createApp(db, {
   clientDir: isProduction ? path.join(rootDir, 'dist') : undefined,
 });
 
