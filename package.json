@@ -1,0 +1,11 @@
+{
+  "name": "internship-and-job-board",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internship & Job Board: recruiters post internships, the Career Office approves them, students apply with a CV link and track their status.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {}
+}
