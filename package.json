@@ -7,5 +7,15 @@
   "engines": {
     "node": ">=22"
   },
-  "scripts": {}
+  "scripts": {
+    "dev:server": "node --watch src/server/index.js",
+    "start": "cross-env NODE_ENV=production node src/server/index.js"
+  },
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
 }
