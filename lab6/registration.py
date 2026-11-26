@@ -17,7 +17,7 @@ class Student:
         if code in self.courses:
             raise RegistrationError(f"{code} is already registered")
         if self.total_hours + hours > MAX_HOURS:
-            raise RegistrationError("credit-hour limit is 18")
+            raise RegistrationError(f"credit-hour limit is {MAX_HOURS}")
         self.courses[code] = hours
     
     def drop(self, code):
