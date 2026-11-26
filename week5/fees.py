@@ -33,15 +33,19 @@ def tuition_fee(courses, kind, summer=False, *, discount=0, extras=()):
     return total - discount + sum(extras)
 
 
+LABELS = {
+    StudentType.REGULAR: "Student",
+    StudentType.STAFF_CHILD: "Staff child",
+    StudentType.SCHOLARSHIP: "Scholarship",
+}
+
+
 def report(courses, kind, summer=False):
     fee = tuition_fee(courses, kind, summer)
-    if kind == StudentType.REGULAR:
-        print("Student fee: " + str(fee))
-    elif kind == StudentType.STAFF_CHILD:
-        print("Staff child fee: " + str(fee))
+    text = f"{LABELS[kind]} fee: {fee}"
     if fee > HIGH_FEE_LIMIT:
-        print("High fee")
-    return fee
+        text += "\nHigh fee"
+    return text
 
 
 def process_all(students):
